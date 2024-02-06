@@ -10,9 +10,22 @@ html {
 	font-family: "Lato", sans-serif;
 	overflow: hidden;
 	user-select: none;
-	cursor: url(././cursor.png) 16 16, auto !important;
+	cursor: url(./cursor.png) 16 16, auto !important;
 	color: white;
 	text-align: center;
+}
+
+#text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 30px;
+
+	color: #ffffff;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	z-index: 2;
+	text-shadow: 0 0 5px #000000;
 }
 
 i {
@@ -33,6 +46,9 @@ Main {
 	align-items: center;
 	justify-content: center;
 }
+.Blur {
+	filter: blur(5px);
+}
 Main .header {
 	width: auto;
 	display: flex;
@@ -44,7 +60,13 @@ Main .header .icons {
 	color: white;
 	font-size: 25px;
 }
-
+Main .emojis a {
+	color: #ffffff !important;
+	text-decoration: underline !important;
+}
+Main .emojis a:hover {
+	color: #b1b1b1 !important;
+}
 .musicButtons i {
 	margin-top: 30px;
 	font-size: 30px;
@@ -82,7 +104,7 @@ Main .header .icons i:hover {
 }
 
 .background {
-	background: radial-gradient(circle at bottom, red 0, black 100%);
+	background: radial-gradient(circle at bottom, rgb(255, 0, 0) 0, black 100%);
 	height: 100vh;
 	overflow: hidden;
 	position: absolute;
