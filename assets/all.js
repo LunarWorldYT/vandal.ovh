@@ -1,10 +1,11 @@
 document.addEventListener("contextmenu", (event) => event.preventDefault());
-
+document.addEventListener("click", off);
 var started = false;
 
 let audio = new Audio("assets/loversrock.mp3");
 
 function off() {
+  document.removeEventListener("click", off);
   document.getElementById("overlay").style.display = "none";
   document.getElementById("content").classList.remove("Blur");
   audio.volume = 0.05;
