@@ -2,7 +2,20 @@ document.addEventListener("contextmenu", (event) => event.preventDefault());
 document.addEventListener("click", off);
 var started = false;
 
-let audio = new Audio("assets/loversrock.mp3");
+function randomSong() {
+  var numba = Math.random();
+  if (numba > 0.0 && numba < 0.33) {
+    return (audio = new Audio("assets/audio/breakintheaction.mp3"));
+  }
+  if (numba > 0.34 && numba < 0.67) {
+    return (audio = new Audio("assets/audio/islandinthesun.mp3"));
+  }
+  if (numba > 0.68 && numba < 1) {
+    return (audio = new Audio("assets/audio/loversrock.mp3"));
+  }
+}
+
+var audio = randomSong();
 
 function off() {
   document.removeEventListener("click", off);

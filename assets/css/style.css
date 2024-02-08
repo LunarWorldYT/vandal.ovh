@@ -10,7 +10,7 @@ html {
 	font-family: "Lato", sans-serif;
 	overflow: hidden;
 	user-select: none;
-	cursor: url(./cursor.png) 16 16, auto !important;
+	cursor: url(../images/cursor.png) 16 16, auto !important;
 	color: white;
 	text-align: center;
 }
@@ -29,14 +29,14 @@ html {
 }
 
 i {
-	cursor: url(./cursor.png) 16 16, auto !important;
+	cursor: url(../images/cursor.png) 16 16, auto !important;
 }
 i:hover {
-	cursor: url(./cursor.png) 16 16, auto !important;
+	cursor: url(../images/cursor.png) 16 16, auto !important;
 }
 
 .icons i i:hover a a:hover {
-	cursor: url(./cursor.png) 16 16, auto !important;
+	cursor: url(../images/cursor.png) 16 16, auto !important;
 }
 
 Main {
