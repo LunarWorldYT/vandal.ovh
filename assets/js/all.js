@@ -2,15 +2,19 @@ document.addEventListener("contextmenu", (event) => event.preventDefault());
 document.addEventListener("click", off);
 var started = false;
 
+let song = "Nothing";
 function randomSong() {
   var numba = Math.random();
   if (numba > 0.0 && numba < 0.33) {
+    song = "Break in the Action";
     return (audio = new Audio("assets/audio/breakintheaction.mp3"));
   }
   if (numba > 0.34 && numba < 0.67) {
+    song = "Island In The Sun";
     return (audio = new Audio("assets/audio/islandinthesun.mp3"));
   }
   if (numba > 0.68 && numba < 1) {
+    song = "Lovers Rock";
     return (audio = new Audio("assets/audio/loversrock.mp3"));
   }
 }
@@ -23,6 +27,7 @@ function off() {
   document.getElementById("content").classList.remove("Blur");
   audio.volume = 0.05;
   play();
+  document.getElementById("nowplaying").innerHTML = "Now playing: " + song;
 }
 
 function play() {
